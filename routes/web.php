@@ -19,4 +19,9 @@ Route::get('/', function () {
 
 Auth::routes();
 
-Route::get('/home', 'HomeController@index')->name('home');
+Route::get('/home', 'HomeController@index')->name('home')->middleware(rolecheck::class);
+Route::post('/login', 'Auth\LoginController@login')->name('login');
+
+Route::middleware('AdministratorCheck')->group(function(){
+   Route::get('/administrator/dashboard', 'Controllers\AdministratorController@dashboard');
+});

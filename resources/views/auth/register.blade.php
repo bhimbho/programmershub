@@ -6,7 +6,7 @@
         <div class="col-md-8">
             <div class="card">
                 <div class="card-header">{{ __('Register') }}</div>
-
+                @include('messages._message')
                 <div class="card-body">
                     <form method="POST" action="{{ route('register') }}">
                         @csrf
@@ -122,7 +122,7 @@
                                     @foreach ($languages as $language)
                                     <div class="col-md-4">
 
-                                    <input type="checkbox" value="{{$language->name}}" class="" name="language[]" id="">
+                                    <input type="checkbox" value="{{$language->id}}" class="" name="language[]" id="">
                                     {{$language->name}}
 
                                     </div>
@@ -139,7 +139,7 @@
                                         @foreach ($specializations as $specialization)
                                         <div class="col-md-4">
 
-                                        <input type="checkbox" value="{{$specialization->name}}" class="" name="specialization[]" id="">
+                                        <input type="checkbox" value="{{$specialization->id}}" class="" name="specialization[]" id="">
                                         {{$specialization->name}}
 
                                         </div>
