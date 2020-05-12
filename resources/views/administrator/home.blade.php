@@ -4,6 +4,12 @@
 <div class="container">
     <div class="row justify-content-center">
         <div class="col-md-8">
+            <div class="main">
+                <ul class="menu">
+                    <li><a href="{{ route('user')}}">User</a></li>
+                    <li>User</li>
+                </ul>
+            </div>
             <div class="card">
                 <div class="card-header">Dashboard</div>
 
@@ -20,3 +26,9 @@
     </div>
 </div>
 @endsection
+<style>
+     ul li{
+        display: inline;
+        padding: 10px;
+    }
+</style>

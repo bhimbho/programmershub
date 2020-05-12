@@ -24,4 +24,6 @@ Route::post('/login', 'Auth\LoginController@login')->name('login');
 
 Route::middleware('AdministratorCheck')->group(function(){
    Route::get('/administrator/dashboard', 'Controllers\AdministratorController@dashboard');
+   Route::get('/administrator/user', 'Controllers\MemberController@member_list')->name('user');
+
 });
